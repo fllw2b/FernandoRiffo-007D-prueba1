@@ -1,0 +1,37 @@
+<section>
+  <h1>AGREGAR ALUMNO</h1>
+  <fieldset>
+  <p> RUT:
+    <input
+      type="text"
+      [value]="alumno.rut"
+      (input)="cambiarRut($event)">
+  </p>
+  <p> Nombre:
+    <input
+      type="text"
+      [value]="alumno.nombre"
+      (input)="cambiarNombre($event)">
+  </p>
+
+  <p> Apellido:
+    <input
+      type="text"
+      [value]="alumno.apellido"
+      (input)="cambiarApellido($event)">
+  </p>
+  <p> Edad:
+    <input
+      type="number"
+      [value]="alumno.edad"
+      (input)="cambiarEdad($event)">
+  </p>
+  <p>Sección:
+    <select [value]="alumno.seccion" (change)="cambiarSeccion($event)">
+      <option>
+      </option>
+    </select>
+  </p>
+  <button (click)="guardarAlumno()">Guardar</button>
+  </fieldset>
+</section>

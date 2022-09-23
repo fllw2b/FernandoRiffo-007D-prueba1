@@ -1,0 +1,9 @@
+<section>
+  <h1>LISTA ALUMNOS:</h1>
+  <fieldset>
+  <app-alumno *ngFor="let item of alumnos"
+  [alumno]="item">
+  {{ item }}
+  </app-alumno>
+  </fieldset>
+</section>
