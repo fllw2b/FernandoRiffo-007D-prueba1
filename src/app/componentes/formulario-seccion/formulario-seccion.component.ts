@@ -26,7 +26,7 @@ export class FormularioSeccionComponent {
       ...this.seccion
     }
 
-    this.enviarSeccion.emit(copia)
+    this.enviarSeccion.emit(copia);
     this.seccion.id = 0;
     this.seccion.nombre = '';
   }

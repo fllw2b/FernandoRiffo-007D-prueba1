@@ -21,7 +21,26 @@ export class AppComponent {
     {id: 1,
     nombre: '007D'}
   ]
-  public listaHistorial: Array<Seccion> = [
+  public listaHistorial: Array<Historial> = [
 
   ]
+
+  public guardarAlumno(nuevo: Alumno): void{
+    this.listaAlumnos.push(nuevo)
+    this.guardarHistorial(nuevo)
+  }
+
+  public guardarSeccion(nuevo: Seccion): void {
+    this.listaSecciones.push(nuevo)
+  }
+
+  public guardarHistorial(nuevo: Alumno): void{
+    const variable: Historial = {
+      fecha: new Date(),
+      alumno: nuevo,
+    }
+    this.listaHistorial.push(variable)
+  }
+
+
 }

@@ -28,7 +28,8 @@
   </p>
   <p>Sección:
     <select [value]="alumno.seccion" (change)="cambiarSeccion($event)">
-      <option>
+      <option *ngFor="let item of secciones"
+      [value]="item.nombre">
       </option>
     </select>
   </p>

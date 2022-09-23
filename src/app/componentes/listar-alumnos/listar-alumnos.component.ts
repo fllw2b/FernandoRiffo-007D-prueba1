@@ -8,5 +8,4 @@ import { Alumno } from '../../modelos/alumno'
 export class ListarAlumnosComponent{
   @Input()
   public alumnos: Array<Alumno> = []
-
 }

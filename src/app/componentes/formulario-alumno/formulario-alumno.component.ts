@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Alumno } from '../../modelos/alumno'
+import { Seccion } from '../../modelos/seccion'
 
 @Component({
   selector: 'app-formulario-alumno',
@@ -7,10 +8,13 @@ import { Alumno } from '../../modelos/alumno'
   styleUrls: ['./formulario-alumno.component.scss']
 })
 export class FormularioAlumnoComponent {
+  @Output()
 
   public enviarAlumno = new EventEmitter<Alumno>;
 
   public alumnos: Array<Alumno> = [];
+
+  public secciones: Array<Seccion> = []
 
   public alumno: Alumno = {
     rut: '',

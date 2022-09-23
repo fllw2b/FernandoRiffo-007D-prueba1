@@ -2,7 +2,7 @@
   <h1>AGREGAR SECCIÓN</h1>
   <fieldset>
     <p>Nombre Sección:</p>
-    <input type="text" (input)="cambiarNombre($event)">
+    <input type="text" [value]="seccion.nombre" (input)="cambiarNombre($event)">
     <br>
     <br>
     <button (click)="guardarSeccion()">Guardar</button>
