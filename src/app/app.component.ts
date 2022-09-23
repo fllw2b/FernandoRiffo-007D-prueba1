@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Alumno } from './modelos/alumno'
 import { Seccion} from './modelos/seccion'
 import { Historial } from './modelos/historial'
@@ -9,20 +9,17 @@ import { Historial } from './modelos/historial'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  @Input()
+
   public listaAlumnos: Array<Alumno> = [
-    {rut: '12345678',
-    nombre: 'Fernando',
-    apellido: 'Riffo',
-    edad: 21,
-    seccion: {id: 1, nombre: '007D'}
-    }
   ]
+
   public listaSecciones: Array<Seccion> = [
     {id: 1,
-    nombre: '007D'}
+    nombre: 'Sin Sección'}
   ]
-  public listaHistorial: Array<Historial> = [
 
+  public listaHistorial: Array<Historial> = [
   ]
 
   public guardarAlumno(nuevo: Alumno): void{

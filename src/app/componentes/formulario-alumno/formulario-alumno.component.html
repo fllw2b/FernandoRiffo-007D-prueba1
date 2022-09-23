@@ -1,6 +1,6 @@
 <section>
-  <h1>AGREGAR ALUMNO</h1>
   <fieldset>
+  <h1>AGREGAR ALUMNO</h1>
   <p> RUT:
     <input
       type="text"
@@ -26,10 +26,13 @@
       [value]="alumno.edad"
       (input)="cambiarEdad($event)">
   </p>
-  <p>Sección:
-    <select [value]="alumno.seccion" (change)="cambiarSeccion($event)">
-      <option *ngFor="let item of secciones"
-      [value]="item.nombre">
+  <p> Seccion:
+    <select
+      (change)="cambiarSeccion($event)">
+      <option
+        *ngFor="let item of secciones"
+        [value]="item.nombre"
+      > {{ item.nombre }}
       </option>
     </select>
   </p>

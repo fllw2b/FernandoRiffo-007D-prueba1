@@ -11,9 +11,16 @@ export class FormularioSeccionComponent {
 
   public enviarSeccion = new EventEmitter<Seccion>;
 
+  public idCambiante: number = 0;
+
   public seccion: Seccion = {
     id: 0,
     nombre: ''
+  }
+
+  public cambiarId(evento: Event): void{
+    const variable = evento.target as HTMLInputElement;
+    this.seccion.id = Number.parseInt(variable.value);
   }
 
   public cambiarNombre(evento: Event): void{
@@ -22,6 +29,7 @@ export class FormularioSeccionComponent {
   }
 
   public guardarSeccion(): void{
+    this.seccion.id = this.seccion.id + 1;
     const copia: Seccion = {
       ...this.seccion
     }

@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { Alumno } from '../../modelos/alumno'
 import { Seccion } from '../../modelos/seccion'
 
@@ -8,13 +8,13 @@ import { Seccion } from '../../modelos/seccion'
   styleUrls: ['./formulario-alumno.component.scss']
 })
 export class FormularioAlumnoComponent {
-  @Output()
+  @Input()
+  public secciones: Array<Seccion> = [];
 
+  @Output()
   public enviarAlumno = new EventEmitter<Alumno>;
 
   public alumnos: Array<Alumno> = [];
-
-  public secciones: Array<Seccion> = []
 
   public alumno: Alumno = {
     rut: '',
@@ -56,6 +56,6 @@ export class FormularioAlumnoComponent {
     this.alumno.nombre = '';
     this.alumno.apellido = '';
     this.alumno.edad = 0;
-    this.alumno.seccion.nombre = '';
+    this.alumno.seccion = {id: 0, nombre: ''};
   }
 }

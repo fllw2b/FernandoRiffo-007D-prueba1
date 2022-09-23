@@ -1,4 +1,10 @@
 <section>
-  <p>Fecha: {{ historial.fecha | date: 'dd/mm/yyyy' }}</p>
-  <p>Nombre: {{ historial.alumno.nombre | }</p>
+  <fieldset>
+    <p>Fecha: {{ historial.fecha | date: 'dd/M/yyyy' }} </p>
+    <p>RUT: {{ historial.alumno.rut }} </p>
+    <p>Nombre: {{ historial.alumno.nombre | uppercase }} </p>
+    <p>Apellido: {{ historial.alumno.apellido | lowercase }} </p>
+    <p>Edad: {{ historial.alumno.edad }} </p>
+    <p>Sección: {{ historial.alumno.seccion.nombre }} </p>
+  </fieldset>
 </section>

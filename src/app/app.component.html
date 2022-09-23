@@ -1,3 +1,16 @@
-<app-formulario-seccion (enviarSeccion)="guardarAlumno"></app-formulario-seccion>
-<app-formulario-alumno></app-formulario-alumno>
-<app-listar-alumnos [alumnos]="listaAlumnos"></app-listar-alumnos>
+<app-formulario-seccion
+  (enviarSeccion)="guardarSeccion($event)">
+</app-formulario-seccion>
+
+<app-formulario-alumno
+  [secciones]="listaSecciones"
+  (enviarAlumno)="guardarAlumno($event)">
+</app-formulario-alumno>
+
+<app-listar-alumnos
+  [alumnos]="listaAlumnos">
+</app-listar-alumnos>
+
+<app-listar-historial
+  [historiales]="listaHistorial">
+</app-listar-historial>
